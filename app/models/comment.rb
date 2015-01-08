@@ -3,7 +3,6 @@ class Comment
   include Mongoid::Timestamps
   field :body, type: String
 
-  embedded_in :user
   embedded_in :post
 
   accepts_nested_attributes_for :user

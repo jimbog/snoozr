@@ -208,3 +208,78 @@ Started GET "/assets/jquery-eb3e278249152b5b5d5170b73d9dbf52.js?body=1" for ::1 
 
 
 Started GET "/assets/posts-8f6eecd1178ef85964369ec66d33c4f1.js?body=1" for ::1 at 2015-01-08 14:54:23 -0800
+
+
+Started GET "/" for ::1 at 2015-01-08 15:31:31 -0800
+Processing by UsersController#index as HTML
+  Rendered users/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 343ms (Views: 263.0ms)
+
+
+Started GET "/" for ::1 at 2015-01-08 15:31:32 -0800
+Processing by UsersController#index as HTML
+  Rendered users/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 87ms (Views: 85.9ms)
+
+
+Started GET "/assets/posts-069e88c06b889877799890854d7f4c40.css?body=1" for ::1 at 2015-01-08 15:31:32 -0800
+
+
+Started GET "/assets/application-823e88bf1231c4323ee1d35731d8f1b6.css?body=1" for ::1 at 2015-01-08 15:31:32 -0800
+
+
+Started GET "/assets/jquery-eb3e278249152b5b5d5170b73d9dbf52.js?body=1" for ::1 at 2015-01-08 15:31:32 -0800
+
+
+Started GET "/assets/jquery_ujs-0b8f09cf5aec4ba1be1abd9f915c77e2.js?body=1" for ::1 at 2015-01-08 15:31:32 -0800
+
+
+Started GET "/assets/turbolinks-924184401b7d116eadaaefc96895fa84.js?body=1" for ::1 at 2015-01-08 15:31:32 -0800
+
+
+Started GET "/assets/posts-8f6eecd1178ef85964369ec66d33c4f1.js?body=1" for ::1 at 2015-01-08 15:31:32 -0800
+
+
+Started GET "/" for ::1 at 2015-01-08 15:55:33 -0800
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 940ms (Views: 939.3ms)
+
+
+Started GET "/assets/application-367c100594a401afda66dc00316e49ba.js?body=1" for ::1 at 2015-01-08 15:55:34 -0800
+
+
+Started GET "/assets/comments-069e88c06b889877799890854d7f4c40.css?body=1" for ::1 at 2015-01-08 15:55:34 -0800
+
+
+Started GET "/assets/posts-069e88c06b889877799890854d7f4c40.css?body=1" for ::1 at 2015-01-08 15:55:34 -0800
+
+
+Started GET "/assets/application-823e88bf1231c4323ee1d35731d8f1b6.css?body=1" for ::1 at 2015-01-08 15:55:34 -0800
+
+
+Started GET "/assets/users-069e88c06b889877799890854d7f4c40.css?body=1" for ::1 at 2015-01-08 15:55:34 -0800
+
+
+Started GET "/assets/jquery-eb3e278249152b5b5d5170b73d9dbf52.js?body=1" for ::1 at 2015-01-08 15:55:34 -0800
+
+
+Started GET "/assets/static_pages-069e88c06b889877799890854d7f4c40.css?body=1" for ::1 at 2015-01-08 15:55:34 -0800
+
+
+Started GET "/assets/turbolinks-924184401b7d116eadaaefc96895fa84.js?body=1" for ::1 at 2015-01-08 15:55:34 -0800
+
+
+Started GET "/assets/comments-8f6eecd1178ef85964369ec66d33c4f1.js?body=1" for ::1 at 2015-01-08 15:55:34 -0800
+
+
+Started GET "/assets/jquery_ujs-0b8f09cf5aec4ba1be1abd9f915c77e2.js?body=1" for ::1 at 2015-01-08 15:55:34 -0800
+
+
+Started GET "/assets/posts-8f6eecd1178ef85964369ec66d33c4f1.js?body=1" for ::1 at 2015-01-08 15:55:34 -0800
+
+
+Started GET "/assets/users-8f6eecd1178ef85964369ec66d33c4f1.js?body=1" for ::1 at 2015-01-08 15:55:34 -0800
+
+
+Started GET "/assets/static_pages-8f6eecd1178ef85964369ec66d33c4f1.js?body=1" for ::1 at 2015-01-08 15:55:34 -0800

@@ -3,8 +3,7 @@ class Post
   include Mongoid::Timestamps
   field :title, type: String
   field :body, type: String
-  
-  belongs_to :user
+
   embeds_many :comments
 
   def date_published
