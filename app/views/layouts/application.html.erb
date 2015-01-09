@@ -1,13 +1,20 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Snoozr</title>
+  <title>Validations</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-
+<% if current_user %>
+    <span>You're currently signed in as <%= current_user.name %>!</span>
+    <%= link_to "Log out!", logout_path, method: :delete %>
+<% else %>
+    <%= link_to "Log in!", login_path %>
+    <%= link_to "Sign up!", signup_path %>
+<% end %>
+<%= link_to "All users", users_path %>
 <%= yield %>
 
 </body>
