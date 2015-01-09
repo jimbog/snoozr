@@ -1,1 +1,15 @@
-new.html.erb
+<h1>Upload Image</h1>
+
+<div id="post-form">
+<h2>Embarrass your friends!</h2>
+<%= form_for @post do |f| %>
+
+	<%= f.file_field :image %>
+	<%= f.label :comment %> <%= f.text_field :title %>
+	<%= f.submit "Upload a Snoozr" :class => 'btn btn-success' %>
+
+<% end %>
+
+<%= link_to "All Posts", posts_path %>
+
+</div>

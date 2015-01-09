@@ -1,8 +1,9 @@
 class Post
   include Mongoid::Document
   include Mongoid::Timestamps
-  field :title, type: String
-  field :body, type: String
+
+  # from carrierwave
+  # mount_uploader :image, AvatarUploader #this field will be an image, carrierwave class for Avatars
 
   embeds_many :comments
 

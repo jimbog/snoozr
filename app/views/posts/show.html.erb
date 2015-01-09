@@ -1,0 +1,12 @@
+<h1>Posts from the current_user</h1>
+
+<!-- images uploaded by user should show here -->
+<section> <!-- add a comment to a photo -->     
+    <%= form_for [@post, @comment] do |f| %>
+        <div>
+            <%= f.label :comment, "Comment:" %>
+            <%= f.text_area :comment%>
+        </div>
+        <%= f.submit "Add a comment!" %>
+    <% end %>
+</section>

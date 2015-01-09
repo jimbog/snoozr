@@ -1,17 +1,16 @@
 Rails.application.routes.draw do
   
-  # root 'static_pages#home'
-  root "users#index"
+  # root 'static_pages#home', as: :something "something" becomes a variable
+  root 'static_pages#home'
+
+  resources :users
+  resources :posts do
+    resources :comments, only: :create
+  end
 
   get "/signup" => "users#new"
-  resources :users, only: [:index, :show, :create]
-
   get "/login" => "sessions#new"
   post "/login" => "sessions#create"
   delete "/logout" => "sessions#destroy"
 
-  resources :posts do
-  resources :comments, only: :create
-  end
-  
 end

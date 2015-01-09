@@ -1,9 +1,12 @@
 <h1>Log In</h1>
 
+<!-- being more specific about the form using {key => value} -->
 <%= form_for :login do |f| %>
+
+<!-- I want the user to be able to login using their user_name rather than their email address -->
     <div>
-        <%= f.label :email %>
-        <%= f.text_field :email %>
+        <%= f.label :username %>
+        <%= f.text_field :username %>
     </div>
 
     <div>
