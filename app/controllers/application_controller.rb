@@ -12,4 +12,3 @@ end
 
 # anything put in here is accessible from everywhere in our app
 	
-end
