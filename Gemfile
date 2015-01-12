@@ -42,6 +42,8 @@ gem 'bcrypt', '~> 3.1.9'
 
 gem 'better_errors'
 
+gem 'thin', group: :production
+
 # Use Unicorn as the app server
 # gem 'unicorn'
 
