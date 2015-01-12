@@ -7,7 +7,7 @@ class User
   attr_reader :password
   
   has_many :posts
-  has_many :comments
+  # has_many :comments
 
 
   #setter method
