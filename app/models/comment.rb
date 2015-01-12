@@ -5,10 +5,6 @@ class Comment
 
   embedded_in :post
 
-  #THIS IS WHERE THE ERROR IS
-  # belongs_to :user
-  accepts_nested_attributes_for :user
-
   # f.fields_for in show.html
   # update params in comments_controller
   def date_added
