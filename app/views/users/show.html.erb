@@ -15,7 +15,6 @@
 				<p>Posts:</p>
 					<ul>
 						<% @user.posts.each do |p| %>
-							<li><strong><%= p.title %></strong>
 								<%= link_to "View Post", post_path(p) %>
 							</li>
 						<% end %>

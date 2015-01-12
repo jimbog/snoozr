@@ -10,7 +10,7 @@ class CommentsController < ApplicationController
 
 	private
 	def comment_params
-		params.require(:comment).permit(:comment, commenter_attributes: [:username])
-		# i want to show the username of who is commenting, do I need commenter_attr?
+		params.require(:comment).permit(:body, commenter_attributes: [:name])
+		# i want to show the name of who is commenting, do I need commenter_attr?
 	end
 end

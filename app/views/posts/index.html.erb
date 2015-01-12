@@ -2,13 +2,11 @@
 
 <div class="row">
 	<div class="col-lg-12">
-		<h1 class="centered">Upload a snoozr</h1>
 		<hr>
 			<div class="row">
 				<div class="col-lg-6 col-lg-offset-4">
 			<% @posts.each do |p| %>
 				<p>
-				<strong><%= p.comment %></strong>
 				<%= link_to "More info", post_path(p) %>
 				</p>
 			<% end %>

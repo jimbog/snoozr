@@ -1,17 +1,14 @@
 
 <div class="row">
-	<h1 class="centered">Embarrass your friends</h1>
-</div>
-
-<div class="row">
 	<div class="col-md-8 col-md-offset-2 form-group">
+	<h1 class="centered">Embarrass your friends</h1>
 	<%= form_for @post do |f| %>
 
 	<%= f.file_field :image %>
-	<%= f.label :comment %> <%= f.text_field :title %>
-	<%= f.submit "Upload a Snoozr" :class => 'btn btn-success' %>
+	<%= f.submit "Upload a Snoozr" %>
 
 <% end %>
+</ br>
 
 <%= link_to "All Posts", posts_path %>
 </div>

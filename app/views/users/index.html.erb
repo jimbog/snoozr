@@ -1,7 +1,7 @@
 <h1>User/Index</h1>
 
 <ul>
-	<% current_user do |user| %>
+	<%= current_user do |user| %>
 
 		<li>
 			<%= user.name %> <%= link_to "More info", user_path(user) %>
