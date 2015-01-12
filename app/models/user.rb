@@ -5,7 +5,10 @@ class User
   field :email, type: String
   field :password_digest, type: String
   attr_reader :password
+  
   has_many :posts
+  has_many :comments
+
 
   #setter method
   def password=(unencrypted_password)
@@ -14,12 +17,6 @@ class User
       self.password_digest = BCrypt::Password.create(unencrypted_password)
     end
   end
-
-  # getter method for password - this is the method that get written by the "attr_reader :password" above
-  # def password
-  #   @password
-  # end
-
 
   def authenticate(unencrypted_password)
     if BCrypt::Password.new(self.password_digest) == unencrypted_password

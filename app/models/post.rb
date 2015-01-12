@@ -5,6 +5,7 @@ class Post
   # from carrierwave
   mount_uploader :image, AvatarUploader #this field will be an image, carrierwave class for Avatars
 
+  belongs_to :user
   embeds_many :comments
 
   def date_published

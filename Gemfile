@@ -15,6 +15,9 @@ gem 'mini_magick' #for post-upload image processing
 gem 'rails_12factor', group: :production #for Heroku
 gem 'thin', group: :production # for Heroku
 
+gem 'bcrypt', '~> 3.1.9'
+gem 'better_errors'
+
 ###################
 # RAILS GEMS
 ###################
@@ -40,9 +43,7 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 
 # Use ActiveModel has_secure_password
-gem 'bcrypt', '~> 3.1.9'
 
-gem 'better_errors'
 
 
 
