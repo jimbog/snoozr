@@ -3,7 +3,7 @@ source 'https://rubygems.org'
 ###################
 # OUR GEMS
 ###################
-ruby '2.0.0'
+# ruby '2.0.0'
 gem 'mongoid', '~> 4.0.0'
 gem 'bootstrap-sass', '~> 3.2.0'
 gem 'figaro'
@@ -13,6 +13,7 @@ gem 'carrierwave-mongoid', :require => 'carrierwave/mongoid'
 
 gem 'fog' #For Amazon S3
 gem 'mini_magick' #for post-upload image processing
+gem 'rails_12factor', group: :production #for Heroku
 
 ###################
 # RAILS GEMS
