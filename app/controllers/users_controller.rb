@@ -21,10 +21,15 @@ class UsersController < ApplicationController
     end
   end
 
+  def edit
+    @user = User.find(params[:id])
+  end
+
+
   def update # this action is responsible for saving an update to a specific user
     @user = User.find(params[:id])
     if @user.update_attributes(user_params)
-      redirect_to users_path, alert: 'Profile Updated'
+      redirect_to users_path(current_user), alert: 'Profile Updated'
     else #if unsuccessful, show to the edit page  
     render "edit"
    end
