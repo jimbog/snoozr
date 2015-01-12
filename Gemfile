@@ -2,8 +2,7 @@ source 'https://rubygems.org'
 
 ###################
 # OUR GEMS
-###################
-# ruby '2.0.0'
+ruby '2.1.3'
 gem 'mongoid', '~> 4.0.0'
 gem 'bootstrap-sass', '~> 3.2.0'
 gem 'figaro'
@@ -14,6 +13,7 @@ gem 'carrierwave-mongoid', :require => 'carrierwave/mongoid'
 gem 'fog' #For Amazon S3
 gem 'mini_magick' #for post-upload image processing
 gem 'rails_12factor', group: :production #for Heroku
+gem 'thin', group: :production # for Heroku
 
 ###################
 # RAILS GEMS
@@ -44,7 +44,7 @@ gem 'bcrypt', '~> 3.1.9'
 
 gem 'better_errors'
 
-gem 'thin', group: :production
+
 
 # Use Unicorn as the app server
 # gem 'unicorn'
