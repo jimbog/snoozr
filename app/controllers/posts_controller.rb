@@ -5,7 +5,6 @@ class PostsController < ApplicationController
 
 	def show
 		@post = Post.find(params[:id])
-		# @user.posts
 		@comment = Comment.new
 	end
 
@@ -15,13 +14,10 @@ class PostsController < ApplicationController
 
 	def create
 		@post = Post.new(post_params)
-		# others ways ... 
-		# @post.user = current_user
-		# @post = current_user.posts.new(post_params)
+		@post.user = current_user
+		# send to posts index if successful
 		if @post.save
 			redirect_to posts_path
-						# posts_path(@post)
-						# ({post: @post.whatever})
 		else 
 			render :new
 		end
