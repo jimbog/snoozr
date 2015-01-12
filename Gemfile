@@ -11,6 +11,7 @@ gem 'carrierwave'
 gem 'carrierwave-mongoid', :require => 'carrierwave/mongoid'
 
 gem 'fog' #For Amazon S3
+gem 'rmagick'
 gem 'mini_magick' #for post-upload image processing
 gem 'rails_12factor', group: :production #for Heroku
 gem 'thin', group: :production # for Heroku
