@@ -9,8 +9,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <%= favicon_link_tag 'favicon.ico' %> 
 </head>
-<body>
 
+<body>
 <!-- Navigation Bar -->
 <% if current_user %>
     <span>You're currently signed in as <%= current_user.name %>!</span>
@@ -19,7 +19,6 @@
     <%= link_to "Log in!", login_path %>
     <%= link_to "Sign up!", signup_path %>
 <% end %>
-<%= link_to "All users", users_path %>
 <!-- End Navigtion Bar -->
 <%= yield %>
 
