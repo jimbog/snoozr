@@ -1,7 +1,6 @@
 class User
   include Mongoid::Document
   field :name, type: String
-  field :username, type: String
   field :email, type: String
   field :password_digest, type: String
   attr_reader :password
@@ -28,7 +27,6 @@ class User
 
   validates :name, presence: true
   validates :email, presence: true, uniqueness: { case_sensitive: false }, format: { with: /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\z/i }
-  validates :username, presence: true, uniqueness: true
   validates :password, presence: true, length: { in: 6..10 }, confirmation: true, on: :create
 
 end
