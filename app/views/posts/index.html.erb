@@ -3,7 +3,7 @@
 	<div class="col-lg-6 col-lg-offset-4">
 	<h1>All posts</h1>
 		<% @posts.reverse_each do |p| %>
-		<%= image_tag p.image.url, :size => "360x360", :crop => :fill %>
+		<%= image_tag p.image.url, :size => "400x400", :crop => :fill %>
 		<p>
 		<%= link_to "Edit", post_path(p) %>
 		</p>
