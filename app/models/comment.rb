@@ -9,7 +9,7 @@ class Comment
   # f.fields_for in show.html
   # update params in comments_controller
   def date_added
-  	self.created_at.localtime.strftime("%-m/%-d/%Y | %l:%M %p")
+  	self.created_at.localtime.strftime("%-m/%-d | %l:%M %p")
   	# created_at is a method from Mondoid:Timestamps
   end
 
