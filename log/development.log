@@ -25554,3 +25554,381 @@ Processing by PostsController#new as HTML
   MOPED: 127.0.0.1:27017 QUERY        database=snoozr_development collection=users selector={"_id"=>BSON::ObjectId('54b43a864d69614e0b010000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.6180ms
   Rendered shared/_navigation.html.erb (2.0ms)
 Completed 200 OK in 229ms (Views: 228.1ms)
+
+
+Started POST "/posts" for 127.0.0.1 at 2015-01-12 15:49:55 -0800
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Z3AxVfwmvquVT/mto2U7ISWToeqklkTuCvJR+wTwscU=", "post"=>{"image"=>#<ActionDispatch::Http::UploadedFile:0x007ff166eec0c8 @tempfile=#<Tempfile:/var/folders/j6/9rqm4tjx58j7fz7rywkf43h00000gn/T/RackMultipart20150112-23128-17ccai0>, @original_filename="IMG_1013.JPG", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"post[image]\"; filename=\"IMG_1013.JPG\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Upload a Snoozr"}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.4920ms
+  MOPED: 127.0.0.1:27017 QUERY        database=snoozr_development collection=users selector={"_id"=>BSON::ObjectId('54b43a864d69614e0b010000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.4970ms
+  MOPED: 127.0.0.1:27017 INSERT       database=snoozr_development collection=posts documents=[{"_id"=>BSON::ObjectId('54b45da34d69615a58090000'), "user_id"=>BSON::ObjectId('54b43a864d69614e0b010000'), "image"=>"IMG_1013.JPG", "updated_at"=>2015-01-12 23:49:55 UTC, "created_at"=>2015-01-12 23:49:55 UTC}] flags=[]
+                         COMMAND      database=snoozr_development command={:getlasterror=>1, :w=>1} runtime: 0.5480ms
+Redirected to http://localhost:3000/posts
+Completed 302 Found in 10ms
+
+
+Started GET "/posts" for 127.0.0.1 at 2015-01-12 15:49:55 -0800
+Processing by PostsController#index as HTML
+  MOPED: 127.0.0.1:27017 QUERY        database=snoozr_development collection=posts selector={} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.5430ms
+  MOPED: 127.0.0.1:27017 QUERY        database=snoozr_development collection=users selector={"_id"=>BSON::ObjectId('54b43a864d69614e0b010000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.4120ms
+  Rendered posts/index.html.erb within layouts/application (2.8ms)
+  Rendered shared/_navigation.html.erb (0.3ms)
+Completed 200 OK in 235ms (Views: 234.2ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2015-01-12 15:51:04 -0800
+Processing by PostsController#index as HTML
+  MOPED: 127.0.0.1:27017 QUERY        database=snoozr_development collection=posts selector={} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.4800ms
+  MOPED: 127.0.0.1:27017 QUERY        database=snoozr_development collection=users selector={"_id"=>BSON::ObjectId('54b43a864d69614e0b010000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.4010ms
+  Rendered posts/index.html.erb within layouts/application (3.4ms)
+  Rendered shared/_navigation.html.erb (0.3ms)
+Completed 200 OK in 225ms (Views: 223.8ms)
+
+
+Started GET "/posts/54b45da34d69615a58090000" for 127.0.0.1 at 2015-01-12 15:51:07 -0800
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"54b45da34d69615a58090000"}
+  MOPED: 127.0.0.1:27017 QUERY        database=snoozr_development collection=posts selector={"_id"=>BSON::ObjectId('54b45da34d69615a58090000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.4560ms
+  MOPED: 127.0.0.1:27017 QUERY        database=snoozr_development collection=users selector={"_id"=>BSON::ObjectId('54b43a864d69614e0b010000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.4440ms
+  MOPED: 127.0.0.1:27017 QUERY        database=snoozr_development collection=users selector={"$query"=>{"_id"=>BSON::ObjectId('54b43a864d69614e0b010000')}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.3510ms
+  Rendered posts/show.html.erb within layouts/application (5.1ms)
+  Rendered shared/_navigation.html.erb (0.3ms)
+Completed 200 OK in 234ms (Views: 232.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-12 17:15:50 -0800
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (2.8ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 1.3070ms
+  MOPED: 127.0.0.1:27017 QUERY        database=snoozr_development collection=users selector={"_id"=>BSON::ObjectId('54b43a864d69614e0b010000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.4790ms
+  Rendered shared/_navigation.html.erb (44.5ms)
+Completed 200 OK in 940ms (Views: 917.8ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2015-01-12 17:16:20 -0800
+Processing by PostsController#index as HTML
+  MOPED: 127.0.0.1:27017 QUERY        database=snoozr_development collection=posts selector={} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.5780ms
+  MOPED: 127.0.0.1:27017 QUERY        database=snoozr_development collection=users selector={"_id"=>BSON::ObjectId('54b43a864d69614e0b010000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.4410ms
+  Rendered posts/index.html.erb within layouts/application (3.7ms)
+  Rendered shared/_navigation.html.erb (0.9ms)
+Completed 200 OK in 259ms (Views: 233.0ms)
+
+
+Started GET "/posts/54b45da34d69615a58090000" for 127.0.0.1 at 2015-01-12 17:21:22 -0800
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"54b45da34d69615a58090000"}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.5500ms
+  MOPED: 127.0.0.1:27017 QUERY        database=snoozr_development collection=posts selector={"_id"=>BSON::ObjectId('54b45da34d69615a58090000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 18.2310ms
+  MOPED: 127.0.0.1:27017 QUERY        database=snoozr_development collection=users selector={"_id"=>BSON::ObjectId('54b43a864d69614e0b010000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.6040ms
+  MOPED: 127.0.0.1:27017 QUERY        database=snoozr_development collection=users selector={"$query"=>{"_id"=>BSON::ObjectId('54b43a864d69614e0b010000')}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 15.7140ms
+  Rendered posts/show.html.erb within layouts/application (599.5ms)
+  Rendered shared/_navigation.html.erb (0.5ms)
+Completed 200 OK in 997ms (Views: 941.6ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2015-01-12 17:22:49 -0800
+Processing by PostsController#index as HTML
+  MOPED: 127.0.0.1:27017 QUERY        database=snoozr_development collection=posts selector={} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.5160ms
+  MOPED: 127.0.0.1:27017 QUERY        database=snoozr_development collection=users selector={"_id"=>BSON::ObjectId('54b43a864d69614e0b010000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.5420ms
+  Rendered posts/index.html.erb within layouts/application (38.5ms)
+  Rendered shared/_navigation.html.erb (0.3ms)
+Completed 200 OK in 222ms (Views: 221.6ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2015-01-12 17:23:07 -0800
+Processing by PostsController#index as HTML
+  MOPED: 127.0.0.1:27017 QUERY        database=snoozr_development collection=posts selector={} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.5310ms
+  MOPED: 127.0.0.1:27017 QUERY        database=snoozr_development collection=users selector={"_id"=>BSON::ObjectId('54b43a864d69614e0b010000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.4770ms
+  Rendered posts/index.html.erb within layouts/application (4.4ms)
+  Rendered shared/_navigation.html.erb (0.3ms)
+Completed 200 OK in 203ms (Views: 202.0ms)
+
+
+Started GET "/posts/54b45da34d69615a58090000" for 127.0.0.1 at 2015-01-12 17:23:12 -0800
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"54b45da34d69615a58090000"}
+  MOPED: 127.0.0.1:27017 QUERY        database=snoozr_development collection=posts selector={"_id"=>BSON::ObjectId('54b45da34d69615a58090000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.4900ms
+  MOPED: 127.0.0.1:27017 QUERY        database=snoozr_development collection=users selector={"_id"=>BSON::ObjectId('54b43a864d69614e0b010000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.4740ms
+  MOPED: 127.0.0.1:27017 QUERY        database=snoozr_development collection=users selector={"$query"=>{"_id"=>BSON::ObjectId('54b43a864d69614e0b010000')}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.4240ms
+  Rendered posts/show.html.erb within layouts/application (4.2ms)
+  Rendered shared/_navigation.html.erb (0.3ms)
+Completed 200 OK in 245ms (Views: 242.8ms)
+
+
+Started GET "/posts/54b45da34d69615a58090000" for 127.0.0.1 at 2015-01-12 17:23:47 -0800
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"54b45da34d69615a58090000"}
+  MOPED: 127.0.0.1:27017 QUERY        database=snoozr_development collection=posts selector={"_id"=>BSON::ObjectId('54b45da34d69615a58090000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.5360ms
+  MOPED: 127.0.0.1:27017 QUERY        database=snoozr_development collection=users selector={"_id"=>BSON::ObjectId('54b43a864d69614e0b010000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.5380ms
+  MOPED: 127.0.0.1:27017 QUERY        database=snoozr_development collection=users selector={"$query"=>{"_id"=>BSON::ObjectId('54b43a864d69614e0b010000')}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.4210ms
+  Rendered posts/show.html.erb within layouts/application (6.2ms)
+  Rendered shared/_navigation.html.erb (0.5ms)
+Completed 200 OK in 274ms (Views: 271.4ms)
+
+
+Started POST "/posts/54b45da34d69615a58090000/comments" for 127.0.0.1 at 2015-01-12 17:23:51 -0800
+Processing by CommentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Z3AxVfwmvquVT/mto2U7ISWToeqklkTuCvJR+wTwscU=", "comment"=>{"body"=>"sleepy boy"}, "commit"=>"Add a comment!", "post_id"=>"54b45da34d69615a58090000"}
+  MOPED: 127.0.0.1:27017 QUERY        database=snoozr_development collection=posts selector={"_id"=>BSON::ObjectId('54b45da34d69615a58090000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.5360ms
+  MOPED: 127.0.0.1:27017 UPDATE       database=snoozr_development collection=posts selector={"_id"=>BSON::ObjectId('54b45da34d69615a58090000')} update={"$push"=>{"comments"=>{"_id"=>BSON::ObjectId('54b473a74d696161f9000000'), "body"=>"sleepy boy", "updated_at"=>2015-01-13 01:23:51 UTC, "created_at"=>2015-01-13 01:23:51 UTC}}} flags=[]
+                         COMMAND      database=snoozr_development command={:getlasterror=>1, :w=>1} runtime: 59.8110ms
+Redirected to http://localhost:3000/posts/54b45da34d69615a58090000
+Completed 302 Found in 65ms
+
+
+Started GET "/posts/54b45da34d69615a58090000" for 127.0.0.1 at 2015-01-12 17:23:51 -0800
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"54b45da34d69615a58090000"}
+  MOPED: 127.0.0.1:27017 QUERY        database=snoozr_development collection=posts selector={"_id"=>BSON::ObjectId('54b45da34d69615a58090000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.5350ms
+  MOPED: 127.0.0.1:27017 QUERY        database=snoozr_development collection=users selector={"_id"=>BSON::ObjectId('54b43a864d69614e0b010000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.4330ms
+  MOPED: 127.0.0.1:27017 QUERY        database=snoozr_development collection=users selector={"$query"=>{"_id"=>BSON::ObjectId('54b43a864d69614e0b010000')}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.3880ms
+  Rendered posts/show.html.erb within layouts/application (5.9ms)
+  Rendered shared/_navigation.html.erb (0.3ms)
+Completed 200 OK in 251ms (Views: 248.8ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2015-01-12 17:24:06 -0800
+Processing by PostsController#index as HTML
+  MOPED: 127.0.0.1:27017 QUERY        database=snoozr_development collection=posts selector={} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.6360ms
+  MOPED: 127.0.0.1:27017 QUERY        database=snoozr_development collection=users selector={"_id"=>BSON::ObjectId('54b43a864d69614e0b010000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.5840ms
+  Rendered posts/index.html.erb within layouts/application (4.9ms)
+  Rendered shared/_navigation.html.erb (0.4ms)
+Completed 200 OK in 230ms (Views: 228.5ms)
+
+
+Started GET "/posts/54b45da34d69615a58090000" for 127.0.0.1 at 2015-01-12 17:27:53 -0800
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"54b45da34d69615a58090000"}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.5110ms
+  MOPED: 127.0.0.1:27017 QUERY        database=snoozr_development collection=posts selector={"_id"=>BSON::ObjectId('54b45da34d69615a58090000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.4470ms
+  MOPED: 127.0.0.1:27017 QUERY        database=snoozr_development collection=users selector={"_id"=>BSON::ObjectId('54b43a864d69614e0b010000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.5570ms
+  MOPED: 127.0.0.1:27017 QUERY        database=snoozr_development collection=users selector={"$query"=>{"_id"=>BSON::ObjectId('54b43a864d69614e0b010000')}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.4520ms
+  Rendered posts/show.html.erb within layouts/application (7.0ms)
+  Rendered shared/_navigation.html.erb (0.5ms)
+Completed 200 OK in 375ms (Views: 372.2ms)
+
+
+Started GET "/posts/54b45da34d69615a58090000" for 127.0.0.1 at 2015-01-12 17:28:57 -0800
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"54b45da34d69615a58090000"}
+  MOPED: 127.0.0.1:27017 QUERY        database=snoozr_development collection=posts selector={"_id"=>BSON::ObjectId('54b45da34d69615a58090000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.8520ms
+  MOPED: 127.0.0.1:27017 QUERY        database=snoozr_development collection=users selector={"_id"=>BSON::ObjectId('54b43a864d69614e0b010000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.4070ms
+  MOPED: 127.0.0.1:27017 QUERY        database=snoozr_development collection=users selector={"$query"=>{"_id"=>BSON::ObjectId('54b43a864d69614e0b010000')}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.3570ms
+  Rendered posts/show.html.erb within layouts/application (5.9ms)
+  Rendered shared/_navigation.html.erb (0.3ms)
+Completed 200 OK in 209ms (Views: 206.5ms)
+
+
+Started GET "/posts/54b45da34d69615a58090000" for 127.0.0.1 at 2015-01-12 17:29:20 -0800
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"54b45da34d69615a58090000"}
+  MOPED: 127.0.0.1:27017 QUERY        database=snoozr_development collection=posts selector={"_id"=>BSON::ObjectId('54b45da34d69615a58090000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.5390ms
+  MOPED: 127.0.0.1:27017 QUERY        database=snoozr_development collection=users selector={"_id"=>BSON::ObjectId('54b43a864d69614e0b010000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.4560ms
+  MOPED: 127.0.0.1:27017 QUERY        database=snoozr_development collection=users selector={"$query"=>{"_id"=>BSON::ObjectId('54b43a864d69614e0b010000')}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.4830ms
+  Rendered posts/show.html.erb within layouts/application (7.2ms)
+  Rendered shared/_navigation.html.erb (0.3ms)
+Completed 200 OK in 211ms (Views: 208.5ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2015-01-12 17:32:51 -0800
+Processing by PostsController#index as HTML
+  MOPED: 127.0.0.1:27017 QUERY        database=snoozr_development collection=posts selector={} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.5390ms
+  MOPED: 127.0.0.1:27017 QUERY        database=snoozr_development collection=users selector={"_id"=>BSON::ObjectId('54b43a864d69614e0b010000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.4870ms
+  Rendered posts/index.html.erb within layouts/application (3.3ms)
+  Rendered shared/_navigation.html.erb (0.4ms)
+Completed 200 OK in 234ms (Views: 232.7ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2015-01-12 17:32:54 -0800
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (22.3ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.4950ms
+  MOPED: 127.0.0.1:27017 QUERY        database=snoozr_development collection=users selector={"_id"=>BSON::ObjectId('54b43a864d69614e0b010000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.3400ms
+  Rendered shared/_navigation.html.erb (1.9ms)
+Completed 200 OK in 258ms (Views: 257.0ms)
+
+
+Started POST "/posts" for 127.0.0.1 at 2015-01-12 17:33:06 -0800
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Z3AxVfwmvquVT/mto2U7ISWToeqklkTuCvJR+wTwscU=", "post"=>{"image"=>#<ActionDispatch::Http::UploadedFile:0x007f8c88a8dce0 @tempfile=#<Tempfile:/var/folders/j6/9rqm4tjx58j7fz7rywkf43h00000gn/T/RackMultipart20150112-25081-fnygzy>, @original_filename="IMG_20141219_122239.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"post[image]\"; filename=\"IMG_20141219_122239.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Upload a Snoozr"}
+  MOPED: 127.0.0.1:27017 QUERY        database=snoozr_development collection=users selector={"_id"=>BSON::ObjectId('54b43a864d69614e0b010000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.5410ms
+  MOPED: 127.0.0.1:27017 INSERT       database=snoozr_development collection=posts documents=[{"_id"=>BSON::ObjectId('54b475d24d696161f9010000'), "user_id"=>BSON::ObjectId('54b43a864d69614e0b010000'), "image"=>"IMG_20141219_122239.jpg", "updated_at"=>2015-01-13 01:33:06 UTC, "created_at"=>2015-01-13 01:33:06 UTC}] flags=[]
+                         COMMAND      database=snoozr_development command={:getlasterror=>1, :w=>1} runtime: 0.5880ms
+Redirected to http://localhost:3000/posts
+Completed 302 Found in 175ms
+
+
+Started GET "/posts" for 127.0.0.1 at 2015-01-12 17:33:06 -0800
+Processing by PostsController#index as HTML
+  MOPED: 127.0.0.1:27017 QUERY        database=snoozr_development collection=posts selector={} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.6380ms
+  MOPED: 127.0.0.1:27017 QUERY        database=snoozr_development collection=users selector={"_id"=>BSON::ObjectId('54b43a864d69614e0b010000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.4880ms
+  Rendered posts/index.html.erb within layouts/application (5.1ms)
+  Rendered shared/_navigation.html.erb (0.4ms)
+Completed 200 OK in 238ms (Views: 236.8ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2015-01-12 17:34:00 -0800
+Processing by PostsController#index as HTML
+  MOPED: 127.0.0.1:27017 QUERY        database=snoozr_development collection=posts selector={} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.5530ms
+  MOPED: 127.0.0.1:27017 QUERY        database=snoozr_development collection=users selector={"_id"=>BSON::ObjectId('54b43a864d69614e0b010000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.4520ms
+  Rendered posts/index.html.erb within layouts/application (5.2ms)
+  Rendered shared/_navigation.html.erb (0.3ms)
+Completed 200 OK in 192ms (Views: 191.4ms)
+
+
+Started GET "/posts/54b475d24d696161f9010000" for 127.0.0.1 at 2015-01-12 17:34:03 -0800
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"54b475d24d696161f9010000"}
+  MOPED: 127.0.0.1:27017 QUERY        database=snoozr_development collection=posts selector={"_id"=>BSON::ObjectId('54b475d24d696161f9010000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.5020ms
+  MOPED: 127.0.0.1:27017 QUERY        database=snoozr_development collection=users selector={"_id"=>BSON::ObjectId('54b43a864d69614e0b010000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.5620ms
+  MOPED: 127.0.0.1:27017 QUERY        database=snoozr_development collection=users selector={"$query"=>{"_id"=>BSON::ObjectId('54b43a864d69614e0b010000')}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.4870ms
+  Rendered posts/show.html.erb within layouts/application (6.5ms)
+  Rendered shared/_navigation.html.erb (0.4ms)
+Completed 200 OK in 298ms (Views: 295.9ms)
+
+
+Started GET "/posts/54b45da34d69615a58090000" for 127.0.0.1 at 2015-01-12 17:34:07 -0800
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"54b45da34d69615a58090000"}
+  MOPED: 127.0.0.1:27017 QUERY        database=snoozr_development collection=posts selector={"_id"=>BSON::ObjectId('54b45da34d69615a58090000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.5400ms
+  MOPED: 127.0.0.1:27017 QUERY        database=snoozr_development collection=users selector={"_id"=>BSON::ObjectId('54b43a864d69614e0b010000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.3900ms
+  MOPED: 127.0.0.1:27017 QUERY        database=snoozr_development collection=users selector={"$query"=>{"_id"=>BSON::ObjectId('54b43a864d69614e0b010000')}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.3780ms
+  Rendered posts/show.html.erb within layouts/application (5.2ms)
+  Rendered shared/_navigation.html.erb (0.3ms)
+Completed 200 OK in 239ms (Views: 237.0ms)
+
+
+Started GET "/posts/54b45da34d69615a58090000" for 127.0.0.1 at 2015-01-12 17:34:07 -0800
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"54b45da34d69615a58090000"}
+  MOPED: 127.0.0.1:27017 QUERY        database=snoozr_development collection=posts selector={"_id"=>BSON::ObjectId('54b45da34d69615a58090000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.5160ms
+  MOPED: 127.0.0.1:27017 QUERY        database=snoozr_development collection=users selector={"_id"=>BSON::ObjectId('54b43a864d69614e0b010000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.4670ms
+  MOPED: 127.0.0.1:27017 QUERY        database=snoozr_development collection=users selector={"$query"=>{"_id"=>BSON::ObjectId('54b43a864d69614e0b010000')}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.3510ms
+  Rendered posts/show.html.erb within layouts/application (4.5ms)
+  Rendered shared/_navigation.html.erb (0.3ms)
+Completed 200 OK in 220ms (Views: 218.0ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2015-01-12 17:40:21 -0800
+Processing by PostsController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 32.3280ms
+  MOPED: 127.0.0.1:27017 QUERY        database=snoozr_development collection=posts selector={} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.5600ms
+  MOPED: 127.0.0.1:27017 QUERY        database=snoozr_development collection=posts selector={} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.6470ms
+  MOPED: 127.0.0.1:27017 QUERY        database=snoozr_development collection=users selector={"_id"=>BSON::ObjectId('54b43a864d69614e0b010000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.5390ms
+  Rendered posts/index.html.erb within layouts/application (102.7ms)
+  Rendered shared/_navigation.html.erb (0.5ms)
+Completed 200 OK in 576ms (Views: 484.9ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2015-01-12 17:40:29 -0800
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (1.4ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=snoozr_development collection=users selector={"_id"=>BSON::ObjectId('54b43a864d69614e0b010000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.4570ms
+  Rendered shared/_navigation.html.erb (1.3ms)
+Completed 200 OK in 242ms (Views: 240.6ms)
+
+
+Started GET "/posts/" for 127.0.0.1 at 2015-01-12 17:40:55 -0800
+Processing by PostsController#index as HTML
+  MOPED: 127.0.0.1:27017 QUERY        database=snoozr_development collection=posts selector={} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.7180ms
+  MOPED: 127.0.0.1:27017 QUERY        database=snoozr_development collection=posts selector={} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.6220ms
+  MOPED: 127.0.0.1:27017 QUERY        database=snoozr_development collection=users selector={"_id"=>BSON::ObjectId('54b43a864d69614e0b010000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.4170ms
+  Rendered posts/index.html.erb within layouts/application (5.3ms)
+  Rendered shared/_navigation.html.erb (0.5ms)
+Completed 200 OK in 251ms (Views: 248.1ms)
+
+
+Started GET "/posts/" for 127.0.0.1 at 2015-01-12 17:47:49 -0800
+Processing by PostsController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 100.9280ms
+  MOPED: 127.0.0.1:27017 QUERY        database=snoozr_development collection=posts selector={} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 74.8230ms
+  MOPED: 127.0.0.1:27017 QUERY        database=snoozr_development collection=users selector={"_id"=>BSON::ObjectId('54b43a864d69614e0b010000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 20.0520ms
+  Rendered posts/index.html.erb within layouts/application (230.0ms)
+  Rendered shared/_navigation.html.erb (0.8ms)
+Completed 200 OK in 607ms (Views: 543.3ms)
+
+
+Started GET "/posts/" for 127.0.0.1 at 2015-01-12 17:48:20 -0800
+Processing by PostsController#index as HTML
+  MOPED: 127.0.0.1:27017 QUERY        database=snoozr_development collection=posts selector={} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.6250ms
+  MOPED: 127.0.0.1:27017 QUERY        database=snoozr_development collection=users selector={"_id"=>BSON::ObjectId('54b43a864d69614e0b010000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.4130ms
+  Rendered posts/index.html.erb within layouts/application (5.3ms)
+  Rendered shared/_navigation.html.erb (0.3ms)
+Completed 200 OK in 229ms (Views: 228.4ms)
+
+
+Started GET "/posts/54b475d24d696161f9010000" for 127.0.0.1 at 2015-01-12 17:48:22 -0800
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"54b475d24d696161f9010000"}
+  MOPED: 127.0.0.1:27017 QUERY        database=snoozr_development collection=posts selector={"_id"=>BSON::ObjectId('54b475d24d696161f9010000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.6440ms
+  MOPED: 127.0.0.1:27017 QUERY        database=snoozr_development collection=users selector={"_id"=>BSON::ObjectId('54b43a864d69614e0b010000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.5630ms
+  MOPED: 127.0.0.1:27017 QUERY        database=snoozr_development collection=users selector={"$query"=>{"_id"=>BSON::ObjectId('54b43a864d69614e0b010000')}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 13.2960ms
+  Rendered posts/show.html.erb within layouts/application (37.2ms)
+  Rendered shared/_navigation.html.erb (0.4ms)
+Completed 200 OK in 289ms (Views: 269.2ms)
+
+
+Started GET "/posts/54b475d24d696161f9010000" for 127.0.0.1 at 2015-01-12 17:49:05 -0800
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"54b475d24d696161f9010000"}
+  MOPED: 127.0.0.1:27017 QUERY        database=snoozr_development collection=posts selector={"_id"=>BSON::ObjectId('54b475d24d696161f9010000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.5310ms
+  MOPED: 127.0.0.1:27017 QUERY        database=snoozr_development collection=users selector={"_id"=>BSON::ObjectId('54b43a864d69614e0b010000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.4100ms
+  MOPED: 127.0.0.1:27017 QUERY        database=snoozr_development collection=users selector={"$query"=>{"_id"=>BSON::ObjectId('54b43a864d69614e0b010000')}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.3590ms
+  Rendered posts/show.html.erb within layouts/application (4.3ms)
+  Rendered shared/_navigation.html.erb (0.3ms)
+Completed 200 OK in 214ms (Views: 211.6ms)
+
+
+Started DELETE "/posts/54b475d24d696161f9010000" for 127.0.0.1 at 2015-01-12 17:49:12 -0800
+Processing by PostsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"Z3AxVfwmvquVT/mto2U7ISWToeqklkTuCvJR+wTwscU=", "id"=>"54b475d24d696161f9010000"}
+  MOPED: 127.0.0.1:27017 QUERY        database=snoozr_development collection=posts selector={"_id"=>BSON::ObjectId('54b475d24d696161f9010000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.5170ms
+  MOPED: 127.0.0.1:27017 DELETE       database=snoozr_development collection=posts selector={"_id"=>BSON::ObjectId('54b475d24d696161f9010000')} flags=[:remove_first]
+                         COMMAND      database=snoozr_development command={:getlasterror=>1, :w=>1} runtime: 100.2190ms
+Redirected to http://localhost:3000/posts
+Completed 302 Found in 120ms
+
+
+Started GET "/posts" for 127.0.0.1 at 2015-01-12 17:49:13 -0800
+Processing by PostsController#index as HTML
+  MOPED: 127.0.0.1:27017 QUERY        database=snoozr_development collection=posts selector={} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.5560ms
+  MOPED: 127.0.0.1:27017 QUERY        database=snoozr_development collection=users selector={"_id"=>BSON::ObjectId('54b43a864d69614e0b010000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.4700ms
+  Rendered posts/index.html.erb within layouts/application (3.7ms)
+  Rendered shared/_navigation.html.erb (0.3ms)
+Completed 200 OK in 237ms (Views: 236.2ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2015-01-12 17:49:40 -0800
+Processing by PostsController#index as HTML
+  MOPED: 127.0.0.1:27017 QUERY        database=snoozr_development collection=posts selector={} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.5170ms
+  MOPED: 127.0.0.1:27017 QUERY        database=snoozr_development collection=users selector={"_id"=>BSON::ObjectId('54b43a864d69614e0b010000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.4250ms
+  Rendered posts/index.html.erb within layouts/application (3.9ms)
+  Rendered shared/_navigation.html.erb (0.3ms)
+Completed 200 OK in 220ms (Views: 219.2ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2015-01-12 17:50:00 -0800
+Processing by PostsController#index as HTML
+  MOPED: 127.0.0.1:27017 QUERY        database=snoozr_development collection=posts selector={} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.5070ms
+  MOPED: 127.0.0.1:27017 QUERY        database=snoozr_development collection=users selector={"_id"=>BSON::ObjectId('54b43a864d69614e0b010000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.5800ms
+  Rendered posts/index.html.erb within layouts/application (5.1ms)
+  Rendered shared/_navigation.html.erb (0.4ms)
+Completed 200 OK in 216ms (Views: 215.6ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2015-01-12 17:50:39 -0800
+Processing by PostsController#index as HTML
+  MOPED: 127.0.0.1:27017 QUERY        database=snoozr_development collection=posts selector={} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.5510ms
+  MOPED: 127.0.0.1:27017 QUERY        database=snoozr_development collection=users selector={"_id"=>BSON::ObjectId('54b43a864d69614e0b010000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.6150ms
+  Rendered posts/index.html.erb within layouts/application (4.7ms)
+  Rendered shared/_navigation.html.erb (0.3ms)
+Completed 200 OK in 212ms (Views: 211.3ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2015-01-12 17:51:00 -0800
+Processing by PostsController#index as HTML
+  MOPED: 127.0.0.1:27017 QUERY        database=snoozr_development collection=posts selector={} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.4770ms
+  MOPED: 127.0.0.1:27017 QUERY        database=snoozr_development collection=users selector={"_id"=>BSON::ObjectId('54b43a864d69614e0b010000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.4760ms
+  Rendered posts/index.html.erb within layouts/application (5.1ms)
+  Rendered shared/_navigation.html.erb (0.3ms)
+Completed 200 OK in 228ms (Views: 227.5ms)
