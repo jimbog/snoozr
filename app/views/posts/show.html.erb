@@ -12,7 +12,7 @@
     <div>
         <% @post.comments.each do |comment| %>        
             <div>
-                <p> <%= comment.poster_name %> -- <%= comment.body %> at <%= comment.create_at %></p>
+                <p> <%= comment.poster_name %> -- <%= comment.body %></p>
             </div>
         <% end %>
     </div>
