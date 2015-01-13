@@ -6,6 +6,12 @@
 	<div class="col-lg-6 col-lg-offset-3"> 
 
 		<% if current_user %> <!-- if a user is logged in -->
+			<% @posts.reverse_each do |p| %>
+			<%= image_tag p.image.url, :size => "400x400", :crop => :fill %>
+			<p>
+			<%= link_to "Edit", post_path(p) %>
+			</p>
+		<% end %>
 			<%= link_to new_post_path, class: 'btn btn-custom' do %>
 		  	<i class="glyphicon glyphicon-plus"></i> Add snoozr
 				<% end %>
@@ -17,12 +23,7 @@
 	</div>
 </div>
 </br>
-		<% @posts.reverse_each do |p| %>
-		<%= image_tag p.image.url, :size => "400x400", :crop => :fill %>
-		<p>
-		<%= link_to "Edit", post_path(p) %>
-		</p>
-		<% end %>
+
 	</div>
 </div>
 
