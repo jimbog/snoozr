@@ -12,14 +12,14 @@
     <div>
         <% @post.comments.each do |comment| %>        
             <div>
-                <p> <%= @post.user.name %> -- <%= comment.body %></p>
+                <p> <%= comment.poster_name %> -- <%= comment.body %></p>
             </div>
         <% end %>
     </div>
 </section>
 
 <section>
-    <h4>Add a new comment</h4>
+    <h5>Add a new comment</h5>
         <ul>
             <% @comment.errors.full_messages.each do |msg| %>
             <li><%= msg %></li>  
@@ -27,21 +27,21 @@
         </ul>    
     <%= form_for [@post, @comment] do |f| %>
         <div>
-            <%= f.label :body, "Comment:" %>
+
             <%= f.text_area :body%>
         </div>
-        <%= f.submit "Add a comment!" %>
+        <%= f.submit "Add comment!" %>
     <% end %>
 </section>
 
 <div class="row">
   <div class="col-md-8 col-md-offset-2">
     <% if current_user %>
-        <%=  link_to "Edit", edit_post_path, :class => 'btn btn-success'  %>
-        <%= link_to "Delete", :post, method: :delete, data: { confirm: "Are you sure you want to delete your post?" }, :class => 'btn btn-success'  %>
-        <%= link_to "All posts", posts_path, :class => 'btn btn-success'  %>
+        <%=  link_to "Edit", edit_post_path, :class => 'btn btn-custom'  %>
+        <%= link_to "Delete", :post, method: :delete, data: { confirm: "Are you sure you want to delete your post?" }, :class => 'btn btn-custom'  %>
+        <%= link_to "All posts", posts_path, :class => 'btn btn-custom'  %>
     <% else %>
-        <%= link_to "All posts", posts_path, :class => 'btn btn-success'  %>
+        <%= link_to "All posts", posts_path, :class => 'btn btn-custom'  %>
     <% end %>
   </div>
 </div>

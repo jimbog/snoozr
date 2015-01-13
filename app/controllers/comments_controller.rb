@@ -2,9 +2,9 @@ class CommentsController < ApplicationController
 	def 
 		create
 		post = Post.find(params[:post_id])
-		# gives up back specific post object that the post will belong to
-		# we don't need to access w/in a view so we don't need '@post'
-		comment = post.comments.create(comment_params)
+		new_comment = comment_params
+		new_comment[:poster_name] = current_user.name
+		comment = post.comments.create(new_comment)
 		redirect_to post_path(comment.post)
 		end
 
