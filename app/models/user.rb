@@ -6,8 +6,6 @@ class User
   attr_reader :password
   
   has_many :posts
-  # has_many :comments
-
 
   #setter method
   def password=(unencrypted_password)
