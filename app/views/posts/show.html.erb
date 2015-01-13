@@ -6,7 +6,7 @@
 
 
 <section>
-    <%= image_tag @post.image.url, :size => "360x360", :crop => :fill %>
+    <%= image_tag @post.image.url, :size => "400x400", :crop => :fill %>
     <h4>Comments</h4>
 
     <div>
@@ -27,7 +27,6 @@
         </ul>    
     <%= form_for [@post, @comment] do |f| %>
         <div>
-            <%= f.label :body, "Comment:" %>
             <%= f.text_area :body%>
         </div>
         <%= f.submit "Add a comment!" %>
