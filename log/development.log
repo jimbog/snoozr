@@ -37111,3 +37111,102 @@ Processing by PostsController#index as HTML
   Rendered posts/index.html.erb within layouts/application (0.3ms)
   Rendered shared/_navigation.html.erb (0.1ms)
 Completed 200 OK in 195ms (Views: 194.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-13 15:31:09 -0800
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (2.8ms)
+  Rendered shared/_navigation.html.erb (1.3ms)
+Completed 200 OK in 941ms (Views: 919.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-13 15:31:11 -0800
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (0.0ms)
+  Rendered shared/_navigation.html.erb (0.2ms)
+Completed 200 OK in 195ms (Views: 194.8ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2015-01-13 15:31:12 -0800
+Processing by PostsController#index as HTML
+  Rendered posts/index.html.erb within layouts/application (1.1ms)
+  Rendered shared/_navigation.html.erb (0.7ms)
+Completed 200 OK in 219ms (Views: 183.4ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2015-01-13 15:31:14 -0800
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (151.0ms)
+  Rendered shared/_navigation.html.erb (0.2ms)
+Completed 200 OK in 394ms (Views: 393.6ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2015-01-13 15:31:18 -0800
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"A5QD7FbTFDaKwm0RqTLH9wjj5cF3aEo/FB+0HqH2gsM=", "login"=>{"email"=>"mia@test.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 42.7040ms
+  MOPED: 127.0.0.1:27017 QUERY        database=snoozr_development collection=users selector={"$query"=>{"email"=>"mia@test.com"}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 62.0140ms
+  MOPED: 127.0.0.1:27017 QUERY        database=snoozr_development collection=users selector={"_id"=>BSON::ObjectId('54b598d64d6961b886000000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.8390ms
+Redirected to http://localhost:3000/users/54b598d64d6961b886000000
+Completed 302 Found in 223ms
+
+
+Started GET "/users/54b598d64d6961b886000000" for 127.0.0.1 at 2015-01-13 15:31:19 -0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"54b598d64d6961b886000000"}
+  MOPED: 127.0.0.1:27017 QUERY        database=snoozr_development collection=users selector={"_id"=>BSON::ObjectId('54b598d64d6961b886000000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.4700ms
+  MOPED: 127.0.0.1:27017 QUERY        database=snoozr_development collection=users selector={"_id"=>BSON::ObjectId('54b598d64d6961b886000000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.4450ms
+  MOPED: 127.0.0.1:27017 QUERY        database=snoozr_development collection=posts selector={"user_id"=>BSON::ObjectId('54b598d64d6961b886000000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 20.2520ms
+  Rendered users/show.html.erb within layouts/application (25.9ms)
+  Rendered shared/_navigation.html.erb (0.3ms)
+Completed 200 OK in 259ms (Views: 257.0ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2015-01-13 15:31:25 -0800
+Processing by PostsController#index as HTML
+  MOPED: 127.0.0.1:27017 QUERY        database=snoozr_development collection=users selector={"_id"=>BSON::ObjectId('54b598d64d6961b886000000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.5370ms
+  MOPED: 127.0.0.1:27017 QUERY        database=snoozr_development collection=posts selector={} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.4810ms
+  Rendered posts/index.html.erb within layouts/application (3.3ms)
+  Rendered shared/_navigation.html.erb (0.3ms)
+Completed 200 OK in 213ms (Views: 211.8ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2015-01-13 15:31:26 -0800
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (23.9ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=snoozr_development collection=users selector={"_id"=>BSON::ObjectId('54b598d64d6961b886000000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.4940ms
+  Rendered shared/_navigation.html.erb (1.6ms)
+Completed 200 OK in 210ms (Views: 209.1ms)
+
+
+Started GET "/users/54b598d64d6961b886000000" for 127.0.0.1 at 2015-01-13 15:31:27 -0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"54b598d64d6961b886000000"}
+  MOPED: 127.0.0.1:27017 QUERY        database=snoozr_development collection=users selector={"_id"=>BSON::ObjectId('54b598d64d6961b886000000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.6460ms
+  MOPED: 127.0.0.1:27017 QUERY        database=snoozr_development collection=users selector={"_id"=>BSON::ObjectId('54b598d64d6961b886000000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.4500ms
+  MOPED: 127.0.0.1:27017 QUERY        database=snoozr_development collection=posts selector={"user_id"=>BSON::ObjectId('54b598d64d6961b886000000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.4590ms
+  Rendered users/show.html.erb within layouts/application (3.6ms)
+  Rendered shared/_navigation.html.erb (0.3ms)
+Completed 200 OK in 213ms (Views: 211.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-13 15:31:28 -0800
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (0.4ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=snoozr_development collection=users selector={"_id"=>BSON::ObjectId('54b598d64d6961b886000000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.5890ms
+  Rendered shared/_navigation.html.erb (1.6ms)
+Completed 200 OK in 190ms (Views: 189.5ms)
+
+
+Started DELETE "/logout" for 127.0.0.1 at 2015-01-13 15:31:30 -0800
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"A5QD7FbTFDaKwm0RqTLH9wjj5cF3aEo/FB+0HqH2gsM="}
+Redirected to http://localhost:3000/login
+Completed 302 Found in 1ms
+
+
+Started GET "/login" for 127.0.0.1 at 2015-01-13 15:31:30 -0800
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (2.2ms)
+  Rendered shared/_navigation.html.erb (0.3ms)
+Completed 200 OK in 193ms (Views: 192.0ms)
