@@ -34869,3 +34869,13 @@ Processing by PostsController#index as HTML
   Rendered posts/index.html.erb within layouts/application (2.6ms)
   Rendered shared/_navigation.html.erb (0.3ms)
 Completed 200 OK in 183ms (Views: 182.3ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2015-01-13 10:41:38 -0800
+Processing by PostsController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.4990ms
+  MOPED: 127.0.0.1:27017 QUERY        database=snoozr_development collection=users selector={"_id"=>BSON::ObjectId('54b55d604d69617a05010000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.4310ms
+  MOPED: 127.0.0.1:27017 QUERY        database=snoozr_development collection=posts selector={} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.4180ms
+  Rendered posts/index.html.erb within layouts/application (3.5ms)
+  Rendered shared/_navigation.html.erb (0.5ms)
+Completed 200 OK in 199ms (Views: 198.5ms)
