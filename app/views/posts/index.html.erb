@@ -9,12 +9,13 @@
 			<% end %>
 		</br>
 		</br>
-			<% @posts.reverse_each do |p| %>
-			<%= image_tag p.image.url, :size => "400x400", :crop => :fill %>
-			<p><%= link_to "Edit", post_path(p) %></p>
-		<% end %>
+			<% @posts.reverse_each do |p| %> 
+
+			<%= link_to image_tag(p.image.url), post_path(p) %>
 			</br>
-		
+			</br>
+		<% end %>
+
 		<% else %> <!-- otherwise they must sign up -->
 			<%= link_to new_user_path, class: 'btn btn-custom' do %>
 			Sign up to upload
@@ -22,5 +23,4 @@
 		<% end %>
 	</div>
 </div>
-
 
