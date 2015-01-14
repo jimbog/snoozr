@@ -6,6 +6,9 @@ Snoozr is a fun (and funny) way to share your life at GA with friends through a 
 
 Throughout our long days at GA, we sometimes find ourselves nodding off once the coffee is 		gone. I built snoozr so that we may showcase some of our finer moments here at school.
 
+Pivotal Tracker is a work in progress and can be found at:
+https://www.pivotaltracker.com/n/projects/1248864
+
 ## CORE REQUIREMENTS
 This app meets the core requirements:
 * Rails 4 app with MongoDB (Mongoid gem + MongoHQ on Heroku)
