@@ -5,7 +5,7 @@ class User
   field :password_digest, type: String
   attr_reader :password
   
-  has_many :posts
+  has_many :posts, dependent: :destroy
 
   #setter method
   def password=(unencrypted_password)
