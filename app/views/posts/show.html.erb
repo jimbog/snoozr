@@ -1,26 +1,18 @@
 
 
 <div class="row">
-  <div class="col-md-8 col-md-offset-2">
-    <% if current_user %>
+    <div class="col-md-6 col-md-offset-3">
+            </br>
           <p>Added by <%= @post.user.name %></p>
-    <% end %>
-    <% if current_user %>
-        <%=  link_to "Edit", edit_post_path, :class => 'btn btn-custom'  %>
-        <%= link_to "Delete", :post, method: :delete, data: { confirm: "Are you sure you want to delete your post?" }, :class => 'btn btn-custom'  %>
-        <%= link_to "All posts", posts_path, :class => 'btn btn-custom'  %>
-    <% else %>
-        <%= link_to "All posts", posts_path, :class => 'btn btn-custom'  %>
-    <% end %>
-  </div>
+    </div>
 </div>
 
-
-
-<section>
+<div class="row">
+    <div class="col-md-6 col-md-offset-3">
     <%= image_tag @post.image.url, :size => "400x400", :crop => :fill %>
     <h4>Comments</h4>
 
+    <!-- Shows comments from users -->
     <div>
         <% @post.comments.each do |comment| %>        
             <div>
@@ -28,10 +20,9 @@
             </div>
         <% end %>
     </div>
-</section>
 
-<section>
-    <h4>Add a new comment</h4>
+    <!-- Adding a comment  -->
+    <h5>Add a new comment</h5>
         <ul>
             <% @comment.errors.full_messages.each do |msg| %>
             <li><%= msg %></li>  
@@ -43,4 +34,3 @@
         </div>
         <%= f.submit "Add a comment!" %>
     <% end %>
-</section>
