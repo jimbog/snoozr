@@ -1,64 +1,20 @@
 # WDI: SECOND PROJECT
 
-<h1>snoozr</h1>
-<h2>a GA nap app</h2>
+snoozr -- a GA nap app
 
-* Practice building basic Rails apps that connect to a non-relational (Mongo) database
-* Use RESTful routes
-* Implement CRUD (Create/Read/Update/Destroy) functionality in an app
-* Write an authentication system by hand (no gems besides BCrypt!)
+Snoozr is a fun (and funny) way to share your life at GA with friends through a series of pictures. Snap a photo with your mobile phone, then upload to the site.
 
-
-You will be working **individually** for this first project, and you'll be designing the app yourself. Remember to keep things small -- scope creep/feature creep is the biggest pitfall for this project!
+Throughout our long days at GA, we sometimes find ourselves nodding off once the coffee is 		gone. I built snoozr so that we may showcase some of our finer moments here at school.
 
 ## CORE REQUIREMENTS
-Make sure to do all of the following with your app.
-
+This app meets the core requirements:
 * Rails 4 app with MongoDB (Mongoid gem + MongoHQ on Heroku)
 * Full CRUD functionality in at least one controller
 * Authentication by-hand
 * RESTful routes
 
 ## CHALLENGE ADD-ONS
-These are for extra credit! Don't forget -- you'll need to have your base app complete before you build any of these in -- so plan for different stages of your project, including one that meets only the core requirements.
-
-* Style your app with Bootstrap/SASS
-* Have multiple models/additional controllers
-* Use an API -- Google Maps, Yelp, etc
+* Styling was done with Bootstrap/SASS
+* Multiple models and controllers
 
 
-## PLANNING & DELIVERABLES
-
-####Project Plan deliverables:
-
-* **Pitch** -- sell the entire class on your project idea (make sure that it makes sense with the objectives!).
-* **Stories in Pivotal Tracker** -- we'll be paying closer attention this time, so be sure to keep up with your Tracker
-
-
-####Completed Project deliverables:
-
-* Link to Heroku hosted project
-* Link to source code on GitHub
-
-
-## TIMELINE (Weeks 5-7)
-
-* **Pitch day**: Friday, Week 5. ---> **December 19, 2014**
-* **Demo day**: Wednesday, Week 7. ---> **January 14, 2015**
-* **Code reviews**: end of Week 7
-
-## Things to keep in mind
-Make sure that your code is:
-
-* DRY. Follow Ruby best practices!
-* RESTful. Do things the Rails way.
-* Well-formatted. Are you indenting well? Can we find the start and end of every div, curly brace, etc?
-* Well-commented. Will I understand what is going on in each block or function?
-* Clear. Do your naming conventions make sense? Would another developer be able to look at your app and understand what everything is?
-
-
-We’ll also be looking at:
-
-* Quality of communication around decision-making. Can you defend why you chose
-a certain technology or why you implemented your solution in a certain way?
-* Your ability to pick up new technologies and push yourself. Were you able to make the app you pitched? What makes it exceptional?
