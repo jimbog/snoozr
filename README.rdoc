@@ -1,8 +1,7 @@
 # WDI: SECOND PROJECT
 
-snoozr
-
-The objective of this project is to:
+<h1>snoozr</h1>
+<h2>a GA nap app</h2>
 
 * Practice building basic Rails apps that connect to a non-relational (Mongo) database
 * Use RESTful routes
