@@ -18,7 +18,6 @@ gem 'thin', group: :production # for Heroku
 
 gem 'bcrypt', '~> 3.1.9'
 gem 'better_errors'
-gem 'simple_form'
 
 ###################
 # RAILS GEMS
